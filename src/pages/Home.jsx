@@ -1,12 +1,18 @@
 import React from 'react';
-
+import GeneralInfo from 'components/sections/GeneralInfo';
+import Academic from 'components/sections/Academic';
+import Laboral from 'components/sections/Laboral';
+import Hobbies from 'components/sections/Hobbies';
+import Languages from 'components/sections/Languages';
+import Courses from 'components/sections/Courses';
 const Home = () => (
   <main>
-    <h1 className='text-3xl font-extrabold'>CV Starter Code</h1>
-    <div className='flex flex-col'>
-      <span className='text-indigo-500 text-lg'>With Tailwind...</span>
-      <span className='text-gray-200'>And react router</span>
-    </div>
+    <GeneralInfo />
+    <Academic />
+    <Laboral />
+    <Hobbies />
+    <Languages />
+    <Courses/>
   </main>
 );
 

@@ -1,17 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import Footer from 'components/sections/Footer';
+import Header from 'components/sections/Header';
 
-// delete this
-const Layout = () => <Outlet />;
-
-// replace it with your own layout
-// const Layout = () => {
-//   return (
-//     <>
-//       <>
-//         <Outlet />
-//       </>
-//     </>
-//   );
-// };
+const Layout = () => (
+  <div>
+    <Header />
+    <Outlet />
+    <Footer />
+  </div>
+);
 
 export default Layout;
