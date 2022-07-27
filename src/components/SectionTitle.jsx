@@ -1,7 +1,7 @@
-const SectionTitle = ({text}) => (
-    <div className=''>
-      <h2>{text}</h2>
-    </div>
- );
+const SectionTitle = ({ text }) => (
+  <div className=''>
+    <h2>{text}</h2>
+  </div>
+);
 
- export default SectionTitle;
+export default SectionTitle;

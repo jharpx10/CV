@@ -1,6 +1,6 @@
 import Experience from 'components/Experience';
 
-const Experiences = ({  experiences }) => (
+const Experiences = ({ experiences }) => (
   <div className=''>
     {experiences.map((experience) => (
       <Experience

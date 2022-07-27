@@ -1,19 +1,12 @@
-import  { hobbies} from 'utils/constants'
+import { hobbies } from 'utils/constants';
 import Hobbie from 'components/Hobbie';
 import SectionTitle from 'components/SectionTitle';
 
-
-
 const Hobbies = () => (
   <div>
-      <SectionTitle
-    text="HOBBIES"
-    />
+    <SectionTitle text='HOBBIES' />
     {hobbies.map((hobbie) => (
-      <Hobbie 
-      name={hobbie.name} 
-      imgSrc={hobbie.imgSrc} 
-      />
+      <Hobbie name={hobbie.name} imgSrc={hobbie.imgSrc} />
     ))}
   </div>
 );

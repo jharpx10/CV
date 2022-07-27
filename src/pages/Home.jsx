@@ -5,6 +5,7 @@ import Laboral from 'components/sections/Laboral';
 import Hobbies from 'components/sections/Hobbies';
 import Languages from 'components/sections/Languages';
 import Courses from 'components/sections/Courses';
+
 const Home = () => (
   <main>
     <GeneralInfo />
@@ -12,7 +13,7 @@ const Home = () => (
     <Laboral />
     <Hobbies />
     <Languages />
-    <Courses/>
+    <Courses />
   </main>
 );
 
