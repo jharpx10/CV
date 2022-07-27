@@ -84,6 +84,15 @@ const courses = [
   { name: 'Pruebas de software', imgSrc: testCourse, date: '2022' },
 ];
 
+const socialLinks = [
+  { name: 'Correo', link: 'mailto:jharpx10@gmail.com' },
+  { name: 'Github', link: 'https://github.com/jharpx10' },
+  {
+    name: 'Linkedin',
+    link: 'https://co.linkedin.com/in/juan-alejandro-rios-perez-226383150?trk=people-guest_people_search-card',
+  },
+];
+
 module.exports = {
   crypto,
   chess,
@@ -95,4 +104,5 @@ module.exports = {
   hobbies,
   languages,
   courses,
+  socialLinks,
 };

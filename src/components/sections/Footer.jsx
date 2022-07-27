@@ -1,13 +1,11 @@
 import ContactButton from 'components/ContactButton';
+import { socialLinks } from 'utils/constants';
 
 const Footer = () => (
   <div className='footer'>
-    <ContactButton text='Correo' target='mailto:jharpx10@gmail.com' />
-    <ContactButton text='Github' target='https://github.com/jharpx10' />
-    <ContactButton
-      text='LinkedIN'
-      target='https://co.linkedin.com/in/juan-alejandro-rios-perez-226383150?trk=people-guest_people_search-card'
-    />
+    {socialLinks.map((socialLink) => (
+      <ContactButton text={socialLink.name} target={socialLink.link} />
+    ))}
   </div>
 );
 
