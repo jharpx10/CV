@@ -1,5 +1,5 @@
 const ContactButton = ({ text, target }) => (
-  <div className='rounded-md bg-white shadow-xs'>
+  <div className=''>
     <a href={target}>{text}</a>
   </div>
 );

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+    /* iPad air*/
+@media (max-width: 820px) {
+  
+  }
+  
+  /* iPhone SE design*/
+  @media (max-width: 375px) {
+    
+  }

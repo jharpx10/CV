@@ -1,19 +1,29 @@
-const formation = {
+const formationSection = {
   title: 'Formación',
   id: 'formation',
   linkText: 'Formación',
 };
-const work = {
+const workSection = {
   title: 'Experiencia profesional',
   id: 'work',
   linkText: 'Experiencia',
 };
-const hobbies = { title: 'Hobbies', id: 'hobbies', linkText: 'Hobbies' };
-const courses = {
+const hobbiesSection = { title: 'Hobbies', id: 'hobbies', linkText: 'Hobbies' };
+const coursesSection = {
   title: 'Cursos de la universidad',
   id: 'courses',
   linkText: 'Cursos',
 };
-const languages = { title: 'Idiomas', id: 'languages', linkText: 'Idiomas' };
+const languagesSection = {
+  title: 'Idiomas',
+  id: 'languages',
+  linkText: 'Idiomas',
+};
 
-module.exports = { formation, work, hobbies, courses, languages };
+module.exports = {
+  formationSection,
+  workSection,
+  hobbiesSection,
+  coursesSection,
+  languagesSection,
+};

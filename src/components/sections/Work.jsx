@@ -1,11 +1,12 @@
 import Experiences from 'components/Experiences';
 import { laboralExperiences } from 'utils/data';
 import SectionTitle from 'components/SectionTitle';
+import { workSection } from 'utils/homeSections';
 
-const Labor = () => (
-  <div className='' id='labor'>
-    <SectionTitle text='EXPERIENCIA PROFESIONAL' />
+const Work = () => (
+  <div className='' id={workSection.id}>
+    <SectionTitle text={workSection.title} />
     <Experiences experiences={laboralExperiences} />
   </div>
 );
-export default Labor;
+export default Work;

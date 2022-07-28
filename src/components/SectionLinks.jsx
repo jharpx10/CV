@@ -1,16 +1,22 @@
 import {
-  formation,
-  work,
-  hobbies,
-  courses,
-  languages,
+  formationSection,
+  workSection,
+  hobbiesSection,
+  coursesSection,
+  languagesSection,
 } from 'utils/homeSections';
 import SectionLink from 'components/SectionLink';
 
-const sections = [formation, work, hobbies, courses, languages];
+const sections = [
+  formationSection,
+  workSection,
+  hobbiesSection,
+  coursesSection,
+  languagesSection,
+];
 
 const SectionsLinks = () => (
-  <div className='text-center'>
+  <div className=''>
     {sections.map((section) => (
       <SectionLink text={section.linkText} id={section.id} />
     ))}

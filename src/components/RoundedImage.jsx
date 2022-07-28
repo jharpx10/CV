@@ -1,5 +1,5 @@
 const RoundedImage = ({ alt, src }) => (
-  <div className='justify-center'>
+  <div className=''>
     <img src={src} className='rounded-full w-56' alt={alt} />
   </div>
 );

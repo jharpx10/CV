@@ -1,10 +1,11 @@
 import { hobbies } from 'utils/data';
 import Hobbie from 'components/Hobbie';
 import SectionTitle from 'components/SectionTitle';
+import { hobbiesSection } from 'utils/homeSections';
 
 const Hobbies = () => (
-  <div id='hobbies'>
-    <SectionTitle text='HOBBIES' id='hobbies' />
+  <div id={hobbiesSection.id}>
+    <SectionTitle text={hobbiesSection.title} id={hobbiesSection.id} />
     {hobbies.map((hobbie) => (
       <Hobbie name={hobbie.name} imgSrc={hobbie.imgSrc} />
     ))}

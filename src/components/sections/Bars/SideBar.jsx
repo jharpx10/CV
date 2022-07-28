@@ -8,24 +8,22 @@ import { generalInformation } from 'utils/data';
 import { photo } from 'utils/images';
 
 const SideBar = () => (
-  <div className='h-screen sticky top-0 overflow-hidden w-60'>
-    <div className='pt-4 pb-2 px-6'>
-      <div className='fex flex-col'>
-        <RoundedImage src={photo} alt='Persona' />
-        <ProfessionInformation
-          profession={generalInformation.profession}
-          description={generalInformation.description}
-        />
-        <GeneralInformation
-          data={[
-            { text: generalInformation.cellphone, svg: null },
-            { text: generalInformation.location, svg: null },
-          ]}
-        />
-      </div>
+  <div className='h-screen sticky top-0 overflow-hidden w-60 text-center'>
+    <div className='fex flex-col pr-6 pl-6'>
+      <RoundedImage src={photo} alt='Persona' />
+      <ProfessionInformation
+        profession={generalInformation.profession}
+        description={generalInformation.description}
+      />
+      <SectionsLinks />
+      <GeneralInformation
+        data={[
+          { text: generalInformation.cellphone, svg: null },
+          { text: generalInformation.location, svg: null },
+        ]}
+      />
+      <SocialLinks />
     </div>
-    <SectionsLinks />
-    <SocialLinks />
   </div>
 );
 export default SideBar;

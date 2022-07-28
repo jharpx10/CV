@@ -1,11 +1,11 @@
 import Experiences from 'components/Experiences';
 import SectionTitle from 'components/SectionTitle';
-import { formation } from 'utils/homeSections';
+import { formationSection } from 'utils/homeSections';
 import { academicExperiences } from 'utils/data';
 
 const Academic = () => (
-  <div className='' id={formation.id}>
-    <SectionTitle text={formation.title} />
+  <div className='' id={formationSection.id}>
+    <SectionTitle text={formationSection.title} />
     <Experiences experiences={academicExperiences} />
   </div>
 );
