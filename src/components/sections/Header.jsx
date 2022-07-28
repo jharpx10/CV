@@ -1,6 +1,8 @@
+import { generalInformation } from 'utils/data';
+
 const Header = () => (
-  <div className=''>
-    <h1>JUAN ALEJANDRO RIOS PEREZ</h1>
-  </div>
+  <header className='sticky top-0 z-10 mt-10 mb-6 pb-2 pt-10 bg-white text-center'>
+    {generalInformation.fullName}
+  </header>
 );
 export default Header;

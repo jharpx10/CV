@@ -1,16 +1,14 @@
 import React from 'react';
-import GeneralInfo from 'components/sections/GeneralInfo';
 import Academic from 'components/sections/Academic';
-import Laboral from 'components/sections/Laboral';
+import Labor from 'components/sections/Labor';
 import Hobbies from 'components/sections/Hobbies';
 import Languages from 'components/sections/Languages';
 import Courses from 'components/sections/Courses';
 
 const Home = () => (
   <main>
-    <GeneralInfo />
     <Academic />
-    <Laboral />
+    <Labor />
     <Hobbies />
     <Languages />
     <Courses />

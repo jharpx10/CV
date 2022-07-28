@@ -1,17 +1,27 @@
-const crypto = require('assets/img/hobbies/crypto.png');
-const chess = require('assets/img/hobbies/chess.png');
-const beatles = require('assets/img/hobbies/beatles.png');
-const development = require('assets/img/hobbies/development.png');
-const physics = require('assets/img/hobbies/physics.png');
+import {
+  crypto,
+  chess,
+  beatles,
+  development,
+  physics,
+  databaseCourse,
+  lenguagesCourse,
+  designCourse,
+  arquitectureCourse,
+  communicationsCourse,
+  testCourse,
+} from 'utils/images';
 
-const databaseCourse = require('assets/img/courses/database.png');
-const lenguagesCourse = require('assets/img/courses/languages.png');
-const designCourse = require('assets/img/courses/design.png');
-const arquitectureCourse = require('assets/img/courses/arquitecture.png');
-const communicationsCourse = require('assets/img/courses/communications.png');
-const testCourse = require('assets/img/courses/test.png');
+export const generalInformation = {
+  fullName: 'JUAN ALEJANDRO RIOS PEREZ',
+  profession: 'Analista de calidad',
+  description:
+    'Analista de calidad con conocimientos de pruebas automatizadas, habilidades desarrollo de software y trabajo en metodología ágil Scrum',
+  location: 'Medellín, Antioquia',
+  cellphone: '+573127095081',
+};
 
-const laboralExperiences = [
+export const laboralExperiences = [
   {
     initialDate: 'Mayo 2021',
     endDate: 'Abril 2022',
@@ -27,7 +37,7 @@ const laboralExperiences = [
   },
 ];
 
-const academicExperiences = [
+export const academicExperiences = [
   {
     initialDate: '',
     endDate: '2016',
@@ -42,7 +52,7 @@ const academicExperiences = [
   },
 ];
 
-const hobbies = [
+export const hobbies = [
   { name: 'Desarrollo', imgSrc: development },
   {
     name: 'Criptomonedas',
@@ -62,12 +72,12 @@ const hobbies = [
   },
 ];
 
-const languages = [
+export const languages = [
   { name: 'Español', proficiency: 'Nativo' },
   { name: 'Inglés', proficiency: 'B2' },
 ];
 
-const courses = [
+export const courses = [
   { name: 'Bases de datos', imgSrc: databaseCourse, date: '2021' },
   { name: 'Teoría de lenguajes', imgSrc: lenguagesCourse, date: '2020' },
   { name: 'Análisis y diseño de software', imgSrc: designCourse, date: '2019' },
@@ -84,7 +94,7 @@ const courses = [
   { name: 'Pruebas de software', imgSrc: testCourse, date: '2022' },
 ];
 
-const socialLinks = [
+export const socialLinks = [
   { name: 'Correo', link: 'mailto:jharpx10@gmail.com' },
   { name: 'Github', link: 'https://github.com/jharpx10' },
   {
@@ -92,17 +102,3 @@ const socialLinks = [
     link: 'https://co.linkedin.com/in/juan-alejandro-rios-perez-226383150?trk=people-guest_people_search-card',
   },
 ];
-
-module.exports = {
-  crypto,
-  chess,
-  beatles,
-  development,
-  physics,
-  laboralExperiences,
-  academicExperiences,
-  hobbies,
-  languages,
-  courses,
-  socialLinks,
-};
