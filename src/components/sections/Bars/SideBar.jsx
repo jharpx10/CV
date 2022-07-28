@@ -8,8 +8,7 @@ import { generalInformation } from 'utils/data';
 import { photo } from 'utils/images';
 
 const SideBar = () => (
-  <div className='h-screen sticky top-0 overflow-hidden w-60 text-center'>
-    <div className='fex flex-col pr-6 pl-6'>
+  <div  id='sideBar'>
       <RoundedImage src={photo} alt='Persona' />
       <ProfessionInformation
         profession={generalInformation.profession}
@@ -24,6 +23,5 @@ const SideBar = () => (
       />
       <SocialLinks />
     </div>
-  </div>
 );
 export default SideBar;

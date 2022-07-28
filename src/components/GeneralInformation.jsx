@@ -1,7 +1,7 @@
 import InformationItem from 'components/InformationItem';
 
 const GeneralInformation = ({ data }) => (
-  <div className=''>
+  <div id='generalInformation'>
     {data.map((information) => (
       <InformationItem text={information.text} svg={information.svg} />
     ))}

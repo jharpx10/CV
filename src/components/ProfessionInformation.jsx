@@ -1,5 +1,5 @@
 const ProfessionInformation = ({ profession, description }) => (
-  <div className='flex flex-col'>
+  <div id="professionInformation">
     <span>{profession}</span>
     <span>{description}</span>
   </div>

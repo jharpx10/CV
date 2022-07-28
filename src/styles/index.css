@@ -4,11 +4,79 @@
 
 
     /* iPad air*/
-@media (max-width: 820px) {
-  
+@media (max-width: 820px) and (min-width: 376px) {
+    #sideBar {
+        @apply  flex w-screen sticky top-0 pt-28 flex-wrap justify-center
+      }
+     #layout{
+        @apply flex flex-col
+      }
+      header{
+        @apply fixed text-center w-screen top-28 ml-20
+      }
+      #roundedImage{
+        @apply rounded-full w-48
+      }
+      #sectionsLinks{
+        @apply flex w-full justify-center
+      }
+      #professionInformation{
+        @apply flex flex-col w-80 pl-10 mt-10
+      }
+      #socialLinks{
+        @apply flex 
+      }
+      #generalInformation{
+        @apply flex w-1/2
+      }
+     
+      
   }
   
   /* iPhone SE design*/
   @media (max-width: 375px) {
-    
+    #sideBar {
+        @apply  flex flex-col relative justify-center
+      }
+     #layout{
+        @apply flex flex-col
+      }
+    #roundedImage{
+        @apply rounded-full w-32  place-self-center mt-4
+      }
+      header{
+        @apply text-center absolute top-40
+      }
+      #generalInformation{
+        @apply flex w-screen
+      }
+
+      #professionInformation{
+        @apply flex flex-wrap w-full place-self-center mt-10
+      }
+
+      #socialLinks{
+        @apply flex 
+      }
+  }
+
+  @media (min-width: 821px) {
+    #sideBar {
+        @apply  h-screen sticky top-0 overflow-hidden w-60 text-center flex flex-col pr-6 pl-6;
+      }
+      #layout{
+        @apply flex
+      }
+      header{
+        @apply sticky top-0 z-10 mt-10 mb-6 pb-2 pt-10 bg-white text-center
+      }
+      #professionInformation{
+        @apply flex flex-col
+      }
+      #roundedImage{
+        @apply rounded-full w-56
+      }
+      #socialLinks{
+        @apply bottom-0 absolute left-0 w-full justify-items-center
+      }
   }
