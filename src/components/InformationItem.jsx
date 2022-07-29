@@ -1,5 +1,5 @@
 const InformationItem = ({ text, svg }) => (
-  <div className=''>
+  <div className='minimal-text'>
     {svg}
     {text}
   </div>
