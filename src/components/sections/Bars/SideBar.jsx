@@ -8,20 +8,20 @@ import { generalInformation } from 'utils/data';
 import { photo } from 'utils/images';
 
 const SideBar = () => (
-  <div  id='sideBar'>
-      <RoundedImage src={photo} alt='Persona' />
-      <ProfessionInformation
-        profession={generalInformation.profession}
-        description={generalInformation.description}
-      />
-      <SectionsLinks />
-      <GeneralInformation
-        data={[
-          { text: generalInformation.cellphone, svg: null },
-          { text: generalInformation.location, svg: null },
-        ]}
-      />
-      <SocialLinks />
-    </div>
+  <div id='sideBar'>
+    <RoundedImage src={photo} alt='Persona' />
+    <ProfessionInformation
+      profession={generalInformation.profession}
+      description={generalInformation.description}
+    />
+    <SectionsLinks />
+    <GeneralInformation
+      data={[
+        { text: generalInformation.cellphone, svg: null },
+        { text: generalInformation.location, svg: null },
+      ]}
+    />
+    <SocialLinks />
+  </div>
 );
 export default SideBar;

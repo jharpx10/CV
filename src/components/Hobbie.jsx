@@ -1,5 +1,5 @@
 const Hobbie = ({ name, imgSrc }) => (
-  <div id="hobbieCard">
+  <div id='hobbieCard'>
     <img src={imgSrc} alt={name} />
     <span>{name}</span>
   </div>
