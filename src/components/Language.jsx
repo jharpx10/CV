@@ -1,6 +1,6 @@
 const Language = ({ name, proficiency }) => (
   <div id='languageCard'>
-    <span>{name}</span>
+    <span className='font-bold'>{name}</span>
     <span>{proficiency}</span>
   </div>
 );

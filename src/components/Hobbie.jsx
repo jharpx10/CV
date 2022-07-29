@@ -1,7 +1,13 @@
 const Hobbie = ({ name, imgSrc }) => (
-  <div id='hobbieCard'>
-    <img src={imgSrc} alt={name} />
-    <span>{name}</span>
+  <div className='flip card'>
+    <div className='flip-content'>
+      <div className='flip-front'>
+        <img src={imgSrc} alt={name} className='' />
+      </div>
+      <div id='' className='flip-back card cardBack'>
+        <span>{name}</span>
+      </div>
+    </div>
   </div>
 );
 

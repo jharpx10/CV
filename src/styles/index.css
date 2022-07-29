@@ -5,9 +5,27 @@
 body {
 
 }
+.minimal-text{
+  @apply text-[#1B1F4B] text-sm font-bold 
+}
+:root {
+  --primary: '#066927';
+  --secondary: '#9611DE';
+  --terciary: '#F98C18';
+  ---black: '#1B1F4B';
+  --gray: '#EBEBEB';
+}
+
+.primary-color-bg{
+  @apply  bg-[#CAF9BC]
+}
+.secondary-color-bg{
+  @apply  bg-[#9611DE]
+}
+
 
 #sideBar, header{
-  @apply bg-[#407abd]
+  @apply primary-color-bg
 }
 
 #mainContent{
@@ -18,22 +36,67 @@ body {
   @apply w-full secondary-text text-center
 }
 
+.flip {
+  perspective: 100%;  
+  @apply text-center
+
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-purple {
+  @apply bg-[#9611DE] text-white;
+}
+.btn-purple:hover {
+  @apply bg-[#850fc5];
+}
+
+.flip-content {
+ /* transition: transform 0.4s;*/
+  transform-style: preserve-3d;
+  @apply transition transform
+}
+.flip:hover .flip-content {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+
+.flip-front, .flip-back {
+  line-height: 150px;
+  backface-visibility: hidden;  
+  border: 6px solid #F98C18;
+  box-shadow: 6px 6px #9611DE;
+  @apply secondary-color-bg
+}
+.flip-back {
+  transform: rotateY(180deg);
+  border: 6px solid #9611DE;
+  box-shadow: 6px 6px #F98C18;
+}
+.container{
+  @apply flex w-full gap-9 flex-wrap justify-center my-10 text-center
+ }
   /* Experience content*/
   #experienceCard{
     @apply flex flex-col bg-white w-60 rounded-xl
      }
+     #experienceInfo{
+      @apply flex flex-col
+       }
      #experienceDate{
-       @apply flex
+       @apply flex place-self-center gap-2 minimal-text
         }
         #title{
           @apply terciary-text
            }
-           .container{
-            @apply flex w-full gap-9 flex-wrap justify-center my-10 text-center
-           }
-           #hobbieCard{
-            @apply flex flex-col bg-white w-60 rounded-2xl
+         
+           .card{
+            @apply flex flex-col bg-white w-60 rounded-2xl 
              }
+             .cardBack{
+              @apply absolute top-0 left-0 w-full h-full
+               }
              #languageCard{
               @apply flex flex-col bg-white w-60 rounded-2xl
                }
@@ -46,7 +109,7 @@ body {
   @media (max-width: 375px) {
    
     #sideBar {
-        @apply  flex flex-col w-screen sticky top-0 justify-center
+        @apply  flex flex-col w-screen sticky top-0 justify-center z-20
       }
      #layout{
         @apply flex flex-col
@@ -74,16 +137,16 @@ body {
         @apply flex 
       }
       .primary-text{
-        @apply text-black font-bold  text-sm text-center
+        @apply text-[#1B1F4B] font-bold  text-sm text-center
        }
        .secondary-text{
-        @apply text-black font-bold  text-lg
+        @apply text-[#1B1F4B] font-bold  text-lg
        }
        .terciary-text{
-         @apply text-black font-bold text-sm
+         @apply text-[#1B1F4B] font-bold text-sm
        }
        .normal-text{
-         @apply text-black text-sm 
+         @apply text-[#1B1F4B] text-sm 
        }
        header {
         @apply bg-transparent
@@ -95,23 +158,23 @@ body {
 @media (max-width: 820px) and (min-width: 376px) {
 
   .primary-text{
-    @apply text-black font-bold text-2xl
+    @apply text-[#1B1F4B] font-bold text-2xl
    }
    .secondary-text{
-    @apply text-black font-bold  text-4xl
+    @apply text-[#1B1F4B] font-bold  text-4xl
    }
    .terciary-text{
-     @apply text-black font-bold text-xl
+     @apply text-[#1B1F4B] font-bold text-xl
    }
    .normal-text{
-    @apply text-black text-xl
+    @apply text-[#1B1F4B] text-xl
     }
    
     #mainContent{
       @apply  text-center
     }
     #sideBar {
-        @apply  flex w-screen sticky top-0 flex-wrap justify-center pt-20 
+        @apply  flex w-screen sticky top-0 flex-wrap justify-center pt-20 z-20
       }
      #layout{
         @apply flex flex-col
@@ -129,13 +192,15 @@ body {
         @apply flex flex-col w-96 ml-4
       }
       #socialLinks{
-        @apply flex 
+        @apply flex
       }
       #generalInformation{
         @apply flex w-1/2 
       }
       
-      
+      .section-btn{
+        @apply text-sm text-center py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-white transition duration-300 ease-in-out
+      }
   }
 
 
@@ -143,16 +208,16 @@ body {
 
 /* Text*/
 .primary-text{
-  @apply text-black font-bold  text-5xl
+  @apply text-[#1B1F4B] font-bold  text-5xl
  }
  .secondary-text{
-  @apply text-black font-bold  text-4xl
+  @apply text-[#1B1F4B] font-bold  text-4xl
  }
  .terciary-text{
-   @apply text-black font-bold text-xl
+   @apply text-[#1B1F4B] font-bold text-xl
  }
  .normal-text{
-   @apply text-black text-sm 
+   @apply text-[#1B1F4B] text-sm 
  }
  .section-btn{
   @apply text-sm text-center py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-white transition duration-300 ease-in-out
@@ -185,7 +250,7 @@ body {
       @apply flex flex-col text-center
     }
     #socialLinks{
-      @apply bottom-0 absolute left-0 w-full
+      @apply flex bottom-0 absolute left-0 w-full
     }
 
       
@@ -195,6 +260,9 @@ body {
         header{
           @apply text-4xl
         }
+      }
+      #generalInformation{
+        @apply flex 
       }
        
   }

@@ -1,5 +1,5 @@
 const ContactButton = ({ text, target }) => (
-  <div className=''>
+  <div className='btn btn-purple'>
     <a href={target}>{text}</a>
   </div>
 );

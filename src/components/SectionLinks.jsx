@@ -16,7 +16,7 @@ const sections = [
 ];
 
 const SectionsLinks = () => (
-  <div id='sectionsLinks'>
+  <div id='sectionsLinks' className=''>
     {sections.map((section) => (
       <SectionLink text={section.linkText} id={section.id} />
     ))}

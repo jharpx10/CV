@@ -2,7 +2,7 @@ import ContactButton from 'components/ContactButton';
 import { socialLinks } from 'utils/data';
 
 const SocialLinks = () => (
-  <div id='socialLinks'>
+  <div id='socialLinks' className=''>
     <hr className='m-0' />
     {socialLinks.map((socialLink) => (
       <ContactButton text={socialLink.name} target={socialLink.link} />
