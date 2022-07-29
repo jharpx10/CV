@@ -1,7 +1,7 @@
 import Experience from 'components/Experience';
 
 const Experiences = ({ experiences }) => (
-  <div className=''>
+  <div id='experiencesContainer' className='container'>
     {experiences.map((experience) => (
       <Experience
         initialDate={experience.initialDate}

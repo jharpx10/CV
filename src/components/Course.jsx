@@ -1,5 +1,5 @@
 const Course = ({ name, imgSrc, date }) => (
-  <div>
+  <div id="courseCard">
     <img src={imgSrc} alt={name} />
     <span>{name}</span>
     <span>{date}</span>

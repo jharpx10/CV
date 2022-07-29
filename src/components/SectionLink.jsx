@@ -1,5 +1,5 @@
 const SectionLink = ({ text, id }) => (
-  <div className=''>
+  <div className='section-btn'>
     <a href={`#${id}`}>{text}</a>
   </div>
 );

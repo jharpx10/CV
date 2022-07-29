@@ -2,41 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
 
-    /* iPad air*/
-@media (max-width: 820px) and (min-width: 376px) {
-    #sideBar {
-        @apply  flex w-screen sticky top-0 pt-28 flex-wrap justify-center
-      }
-     #layout{
-        @apply flex flex-col
-      }
-      header{
-        @apply fixed text-center w-screen top-28 ml-20
-      }
-      #roundedImage{
-        @apply rounded-full w-48
-      }
-      #sectionsLinks{
-        @apply flex w-full justify-center
-      }
-      #professionInformation{
-        @apply flex flex-col w-80 pl-10 mt-10
-      }
-      #socialLinks{
-        @apply flex 
-      }
-      #generalInformation{
-        @apply flex w-1/2
-      }
-     
-      
-  }
+}
+
+#sideBar, header{
+  @apply bg-[#407abd]
+}
+
+#mainContent{
+@apply bg-[#ebebeb]
+}
+
+#sectionTitle{
+  @apply w-full secondary-text text-center
+}
+
+  /* Experience content*/
+  #experienceCard{
+    @apply flex flex-col bg-white w-60 rounded-xl
+     }
+     #experienceDate{
+       @apply flex
+        }
+        #title{
+          @apply terciary-text
+           }
+           .container{
+            @apply flex w-full gap-9 flex-wrap justify-center my-10 text-center
+           }
+           #hobbieCard{
+            @apply flex flex-col bg-white w-60 rounded-2xl
+             }
+             #languageCard{
+              @apply flex flex-col bg-white w-60 rounded-2xl
+               }
+               #courseCard{
+                @apply flex flex-col bg-white w-60 rounded-2xl
+                 }
+           
   
   /* iPhone SE design*/
   @media (max-width: 375px) {
+   
     #sideBar {
-        @apply  flex flex-col relative justify-center
+        @apply  flex flex-col w-screen sticky top-0 justify-center
       }
      #layout{
         @apply flex flex-col
@@ -45,38 +55,146 @@
         @apply rounded-full w-32  place-self-center mt-4
       }
       header{
-        @apply text-center absolute top-40
+        @apply fixed top-36  primary-text ml-20
       }
       #generalInformation{
         @apply flex w-screen
       }
 
       #professionInformation{
-        @apply flex flex-wrap w-full place-self-center mt-10
+        @apply flex flex-wrap w-80  mt-4 ml-8
       }
-
+      #profession{
+        @apply justify-center text-center ml-20
+      }
+      #sectionsLinks{
+        @apply flex w-full justify-center 
+      }
       #socialLinks{
         @apply flex 
       }
+      .primary-text{
+        @apply text-black font-bold  text-sm text-center
+       }
+       .secondary-text{
+        @apply text-black font-bold  text-lg
+       }
+       .terciary-text{
+         @apply text-black font-bold text-sm
+       }
+       .normal-text{
+         @apply text-black text-sm 
+       }
+       header {
+        @apply bg-transparent
+      }
   }
 
-  @media (min-width: 821px) {
+
+      /* iPad air*/
+@media (max-width: 820px) and (min-width: 376px) {
+
+  .primary-text{
+    @apply text-black font-bold text-2xl
+   }
+   .secondary-text{
+    @apply text-black font-bold  text-4xl
+   }
+   .terciary-text{
+     @apply text-black font-bold text-xl
+   }
+   .normal-text{
+    @apply text-black text-xl
+    }
+   
+    #mainContent{
+      @apply  text-center
+    }
     #sideBar {
-        @apply  h-screen sticky top-0 overflow-hidden w-60 text-center flex flex-col pr-6 pl-6;
+        @apply  flex w-screen sticky top-0 flex-wrap justify-center pt-20 
       }
-      #layout{
-        @apply flex
-      }
-      header{
-        @apply sticky top-0 z-10 mt-10 mb-6 pb-2 pt-10 bg-white text-center
-      }
-      #professionInformation{
+     #layout{
         @apply flex flex-col
       }
+      header{
+        @apply fixed top-10 primary-text text-center ml-80
+      }
       #roundedImage{
-        @apply rounded-full w-56
+        @apply rounded-full w-48
+      }
+      #sectionsLinks{
+        @apply flex w-full justify-center 
+      }
+      #professionInformation{
+        @apply flex flex-col w-96 ml-4
       }
       #socialLinks{
-        @apply bottom-0 absolute left-0 w-full justify-items-center
+        @apply flex 
       }
+      #generalInformation{
+        @apply flex w-1/2 
+      }
+      
+      
+  }
+
+
+  @media (min-width: 821px) {
+
+/* Text*/
+.primary-text{
+  @apply text-black font-bold  text-5xl
+ }
+ .secondary-text{
+  @apply text-black font-bold  text-4xl
+ }
+ .terciary-text{
+   @apply text-black font-bold text-xl
+ }
+ .normal-text{
+   @apply text-black text-sm 
+ }
+ .section-btn{
+  @apply text-sm text-center py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-white transition duration-300 ease-in-out
+}
+ 
+/* Layout*/
+    #layout{
+      @apply flex
+    }
+    #sideBar {
+      @apply  h-screen sticky top-0 w-1/4 flex flex-col text-center;
+    }
+    #mainContent{
+      @apply w-3/4 left-1/4 text-center
+    }
+    main{
+      @apply flex flex-col
+    }
+    header{
+      @apply sticky top-0 pt-10 pb-10 primary-text text-center z-20
+    }
+  
+   /* Sidebar content*/
+   
+    #roundedImage{
+      @apply rounded-full w-8/12 mt-4 self-center
+    }
+
+    #professionInformation{
+      @apply flex flex-col text-center
+    }
+    #socialLinks{
+      @apply bottom-0 absolute left-0 w-full
+    }
+
+      
+       
+
+       @media (min-width: 821px) and (max-width: 1100px) {
+        header{
+          @apply text-4xl
+        }
+      }
+       
   }

@@ -1,5 +1,5 @@
 const Language = ({ name, proficiency }) => (
-  <div>
+  <div id="languageCard">
     <span>{name}</span>
     <span>{proficiency}</span>
   </div>

@@ -1,8 +1,10 @@
 import { generalInformation } from 'utils/data';
 
 const Header = () => (
-  <header>
+
+  <header >
     {generalInformation.fullName}
   </header>
+  
 );
 export default Header;

@@ -1,7 +1,7 @@
 const ProfessionInformation = ({ profession, description }) => (
   <div id="professionInformation">
-    <span>{profession}</span>
-    <span>{description}</span>
+    <span className="terciary-text" id="profession">{profession}</span>
+    <span className="normal-text">{description}</span>
   </div>
 );
 

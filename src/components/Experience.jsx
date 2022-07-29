@@ -1,11 +1,18 @@
-const Experience = ({ initialDate, endDate, title, entity, description }) => (
-  <div className='rounded-md bg-white shadow-xs'>
-    <div>{initialDate}</div>
-    <div>{endDate}</div>
-    <div>{title}</div>
 
-    <div>{entity}</div>
-    <div>{description}</div>
-  </div>
+import { photo } from 'utils/images';
+
+const Experience = ({ initialDate, endDate, title, entity, description }) => (
+  <div id='experienceCard'>
+ 
+    <span id='title'>{title}</span>
+    <span id='entity'>{entity}</span>
+    <span id='description'>{description}</span>
+   
+    <div id='experienceDate'>
+    <span id='initialDate'>{initialDate}</span>
+    <span id='endDate'>{endDate}</span>
+    </div>
+    </div>
+
 );
 export default Experience;

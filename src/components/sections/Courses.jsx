@@ -4,7 +4,7 @@ import SectionTitle from 'components/SectionTitle';
 import { coursesSection } from 'utils/homeSections';
 
 const Courses = () => (
-  <div id={coursesSection.id}>
+  <div id={coursesSection.id} className='container'>
     <SectionTitle text={coursesSection.title} id={coursesSection.id} />
     {courses.map((course) => (
       <Course name={course.name} imgSrc={course.imgSrc} date={course.date} />

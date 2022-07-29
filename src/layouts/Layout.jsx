@@ -5,13 +5,14 @@ import SideBar from 'components/sections/Bars/SideBar';
 const Layout = () => (
   <div id='layout'>
     <SideBar />
-    <div className='flex-col'>
+  <div id='mainContent'>
       <Header />
       <main>
         <Outlet />
       </main>
+      </div>
     </div>
-  </div>
+  
 );
 
 export default Layout;
