@@ -17,8 +17,14 @@ const SideBar = () => (
     <SectionsLinks />
     <GeneralInformation
       data={[
-        { text: generalInformation.cellphone, svg: null },
-        { text: generalInformation.location, svg: null },
+        {
+          text: generalInformation.location.text,
+          svg: generalInformation.location.svg,
+        },
+        {
+          text: generalInformation.cellphone.text,
+          svg: generalInformation.cellphone.svg,
+        },
       ]}
     />
     <SocialLinks />

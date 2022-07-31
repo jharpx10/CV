@@ -1,11 +1,11 @@
-import ContactButton from 'components/ContactButton';
+import SocialLink from 'components/SocialLink';
 import { socialLinks } from 'utils/data';
 
 const SocialLinks = () => (
   <div id='socialLinks' className=''>
     <hr className='m-0' />
     {socialLinks.map((socialLink) => (
-      <ContactButton text={socialLink.name} target={socialLink.link} />
+      <SocialLink target={socialLink.link} svg={socialLink.svg} />
     ))}
   </div>
 );

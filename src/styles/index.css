@@ -5,32 +5,53 @@
 body {
 
 }
-.minimal-text{
-  @apply text-[#1B1F4B] text-sm font-bold 
-}
-:root {
-  --primary: '#066927';
-  --secondary: '#9611DE';
-  --terciary: '#F98C18';
-  ---black: '#1B1F4B';
-  --gray: '#EBEBEB';
-}
 
-.primary-color-bg{
-  @apply  bg-[#CAF9BC]
-}
-.secondary-color-bg{
-  @apply  bg-[#9611DE]
-}
+/* Layout */
+/*--------------------------------------------------------------------------*/
 
+/* Text  */
+
+.main-text{
+  @apply text-black font-bold
+}
+.primary-text{
+  @apply main-text
+ }
+ .secondary-text{
+  @apply main-text
+ }
+ .terciary-text{
+   @apply main-text
+ }
+ .normal-text{
+   @apply text-black text-sm 
+ }
+ .date-text{
+  @apply normal-text font-bold
+}
+/*--------------------------------------------------------------------------*/
+
+
+/* Layout */
 
 #sideBar, header{
-  @apply primary-color-bg
+  @apply bg-primary
+}
+main{
+  @apply bg-gray
 }
 
-#mainContent{
-@apply bg-[#ebebeb]
+/*--------------------------------------------------------------------------*/
+
+
+/* SideBar */
+
+#roundedImage{
+  @apply rounded-full
 }
+
+
+/*--------------------------------------------------------------------------*/
 
 #sectionTitle{
   @apply w-full secondary-text text-center
@@ -46,7 +67,7 @@ body {
   @apply font-bold py-2 px-4 rounded;
 }
 .btn-purple {
-  @apply bg-[#9611DE] text-white;
+  @apply bg-secondary;
 }
 .btn-purple:hover {
   @apply bg-[#850fc5];
@@ -67,7 +88,7 @@ body {
   backface-visibility: hidden;  
   border: 6px solid #F98C18;
   box-shadow: 6px 6px #9611DE;
-  @apply secondary-color-bg
+  @apply bg-secondary
 }
 .flip-back {
   transform: rotateY(180deg);
@@ -75,7 +96,8 @@ body {
   box-shadow: 6px 6px #F98C18;
 }
 .container{
-  @apply flex w-full gap-9 flex-wrap justify-center my-10 text-center
+     @apply flex w-full gap-9 flex-wrap justify-center my-10 text-center
+
  }
   /* Experience content*/
   #experienceCard{
@@ -85,7 +107,7 @@ body {
       @apply flex flex-col
        }
      #experienceDate{
-       @apply flex place-self-center gap-2 minimal-text
+       @apply flex place-self-center gap-2
         }
         #title{
           @apply terciary-text
@@ -149,7 +171,7 @@ body {
          @apply text-[#1B1F4B] text-sm 
        }
        header {
-        @apply bg-transparent
+        @apply bg-primary
       }
   }
 
@@ -198,71 +220,116 @@ body {
         @apply flex w-1/2 
       }
       
-      .section-btn{
-        @apply text-sm text-center py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-white transition duration-300 ease-in-out
-      }
+ 
   }
 
 
   @media (min-width: 821px) {
 
-/* Text*/
+/* Text  */
+
+
 .primary-text{
-  @apply text-[#1B1F4B] font-bold  text-5xl
+  @apply text-4xl
  }
  .secondary-text{
-  @apply text-[#1B1F4B] font-bold  text-4xl
+  @apply main-text text-3xl
  }
  .terciary-text{
-   @apply text-[#1B1F4B] font-bold text-xl
+   @apply main-text text-xl
  }
  .normal-text{
-   @apply text-[#1B1F4B] text-sm 
+   @apply text-black text-sm 
  }
- .section-btn{
-  @apply text-sm text-center py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-blue-600 hover:bg-white transition duration-300 ease-in-out
+ .normal-text-white{
+  @apply text-white text-sm 
 }
- 
-/* Layout*/
-    #layout{
-      @apply flex
-    }
-    #sideBar {
-      @apply  h-screen sticky top-0 w-1/4 flex flex-col text-center;
-    }
-    #mainContent{
-      @apply w-3/4 left-1/4 text-center
-    }
-    main{
-      @apply flex flex-col
-    }
-    header{
-      @apply sticky top-0 pt-10 pb-10 primary-text text-center z-20
-    }
-  
-   /* Sidebar content*/
-   
-    #roundedImage{
-      @apply rounded-full w-8/12 mt-4 self-center
-    }
 
-    #professionInformation{
-      @apply flex flex-col text-center
-    }
-    #socialLinks{
-      @apply flex bottom-0 absolute left-0 w-full
-    }
+/*--------------------------------------------------------------------------*/
+
+
+
+/* Layout */
+
+ #layout{
+  @apply flex
+}
+
+
+header{
+  @apply fixed h-32 left-1/4 w-full z-20
+}
+
+#sideBar {
+  @apply h-screen sticky top-0 w-1/4 flex flex-col
+}
+
+main{
+  @apply flex flex-col
+}
+#mainContent{
+  @apply w-3/4 left-1/4 text-center
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Header  */
+#header{
+  @apply primary-text w-1/2 flex justify-center my-9 ml-32
+}
+@media (min-width: 821px) and (max-width: 1100px) {
+  #header{
+    @apply text-2xl
+  }
+}
+/*--------------------------------------------------------------------------*/
+
+/* Side bar*/
+ 
+#roundedImage{
+  @apply rounded-full border-opacity-20 border-4 border-secondary w-8/12 mt-4 self-center
+}
+
+#professionInformation{
+  @apply flex flex-col self-center w-[82%] h-[20%] text-center overflow-y-auto mt-2
+}
+
+#sectionsLinks{
+  @apply flex flex-col self-center bg-secondary rounded-3xl w-[40%] h-[35%] text-center overflow-y-auto mt-1
+}
+.section-btn{
+  @apply  h-8 self-center normal-text-white font-bold bg-secondary hover:border-4 border-terciary my-1 text-ellipsis whitespace-nowrap rounded hover:bg-terciary transition duration-300 ease-in-out text-white
+}
+
+#generalInformation{
+  @apply flex justify-center  h-[10%] text-center overflow-y-auto mt-2 
+}
+.information-item{
+  @apply flex mx-1 my-2
+}
+
+#socialLinks{
+  @apply flex justify-center sticky w-full mb-2
+}
+.social-link{
+  @apply mx-1
+}
+/*--------------------------------------------------------------------------*/
+
+
+/* Academic*/
+
+
+.first-content{
+@apply mt-52
+}
+
+
+div:target::before {
+  
+  content: "";
+  @apply mt-32
+}
 
       
-       
-
-       @media (min-width: 821px) and (max-width: 1100px) {
-        header{
-          @apply text-4xl
-        }
-      }
-      #generalInformation{
-        @apply flex 
-      }
-       
   }

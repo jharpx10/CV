@@ -5,7 +5,7 @@ const Experience = ({ initialDate, endDate, title, entity, description }) => (
       <span id='entity'>{entity}</span>
       <span id='description'>{description}</span>
     </div>
-    <div id='experienceDate'>
+    <div id='experienceDate' className='date-text'>
       <span id='initialDate'>{initialDate} </span>
       {initialDate !== '' && <span>-</span>}
       <span id='endDate'>{endDate}</span>

@@ -4,7 +4,7 @@ import { formationSection } from 'utils/homeSections';
 import { academicExperiences } from 'utils/data';
 
 const Academic = () => (
-  <div className='container' id={formationSection.id}>
+  <div className='container first-content' id={formationSection.id}>
     <SectionTitle text={formationSection.title} />
     <Experiences experiences={academicExperiences} />
   </div>
