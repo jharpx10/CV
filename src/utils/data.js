@@ -84,22 +84,39 @@ export const academicExperiences = [
 ];
 
 export const hobbies = [
-  { name: 'Desarrollo', imgSrc: development },
+  {
+    name: 'Desarrollo',
+    imgSrc: development,
+    description:
+      'Conocimientos en el lenguaje de programación' +
+      ' Javascript en frameworks React y Node js y conocimientos intermedios en Java, PHP y Python',
+  },
   {
     name: 'Criptomonedas',
     imgSrc: crypto,
+    description:
+      'Me interesan las criptomonedas, no cuento con conocimientos muy técnicos, sin embargo, me parece muy' +
+      ' interesante lo que se viene desarrollando allí con los contratos inteligentes como DeFI',
   },
   {
     name: 'Ajedrez',
     imgSrc: chess,
+    description:
+      'En ocasiones me gusta jugar algunas partidas de ajedrez en chess.com',
   },
   {
     name: 'Beatles',
     imgSrc: beatles,
+    description:
+      'Son mi banda favorita por lo cual los suelo escuchar frecuentemente' +
+      ', también me han servido para mejorar mi nivel de inglés',
   },
   {
     name: 'Física',
     imgSrc: physics,
+    description:
+      'Tampoco cuento con conocimientos técnicos, sin embargo, me parece muy' +
+      ' interesante, en especial la física moderna',
   },
 ];
 

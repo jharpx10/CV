@@ -6,7 +6,7 @@ const Course = ({ name, imgSrc, date }) => (
         <span>{name}</span>
       </div>
       <div id='' className='flip-back card cardBack'>
-        <span>Fecha de realización: {date}</span>
+        <span className='cardBack-title'>Fecha de realización: {date}</span>
       </div>
     </div>
   </div>

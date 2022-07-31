@@ -7,7 +7,11 @@ const Hobbies = () => (
   <div id={hobbiesSection.id} className='container'>
     <SectionTitle text={hobbiesSection.title} id={hobbiesSection.id} />
     {hobbies.map((hobbie) => (
-      <Hobbie name={hobbie.name} imgSrc={hobbie.imgSrc} />
+      <Hobbie
+        name={hobbie.name}
+        imgSrc={hobbie.imgSrc}
+        description={hobbie.description}
+      />
     ))}
   </div>
 );
